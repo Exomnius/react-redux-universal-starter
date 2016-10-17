@@ -9,7 +9,8 @@ module.exports = {
   createSourceLoader: createSourceLoader,
   createHappyPlugin: createHappyPlugin,
   installVendorDLL: installVendorDLL,
-  isValidDLLs: isValidDLLs
+  isValidDLLs: isValidDLLs,
+  joinPaths: joinPaths
 };
 
 // restrict loader to files under /src
@@ -88,4 +89,9 @@ function isValidDLLs(dllNames, assetsPath) {
     }
   }
   return true;
+}
+
+function joinPaths(paths){
+    return paths.map(path => `includePaths[]=${path}`).join('&');
+
 }

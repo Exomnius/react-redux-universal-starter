@@ -16,6 +16,12 @@ var webpackIsomorphicToolsPlugin = new WebpackIsomorphicToolsPlugin(require('./w
 var babelrc = fs.readFileSync('./.babelrc');
 var babelrcObject = {};
 
+// Bourbon and neat integration
+const bourbon = require('node-bourbon').includePaths;
+const neat = require('node-neat').includePaths;
+
+const sassPaths = `${helpers.joinPaths(bourbon)}&${helpers.joinPaths(neat)}`;
+
 try {
   babelrcObject = JSON.parse(babelrc);
 } catch (err) {
@@ -67,14 +73,9 @@ var webpackConfig = module.exports = {
         loader: 'json-loader'
       }),
       helpers.createSourceLoader({
-        happy: { id: 'less' },
-        test: /\.less$/,
-        loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!autoprefixer?browsers=last 2 version!less?outputStyle=expanded&sourceMap'
-      }),
-      helpers.createSourceLoader({
         happy: { id: 'sass' },
         test: /\.scss$/,
-        loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap'
+        loader: `style!css?modules&camelCase=dashes&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap&${sassPaths}`
       }),
       { test: /\.woff2?(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
       { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream' },

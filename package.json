@@ -94,6 +94,8 @@
     "lru-memoize": "^1.0.1",
     "morgan": "^1.7.0",
     "multireducer": "^3.0.0",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^1.7.2",
     "pretty-error": "^2.0.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",

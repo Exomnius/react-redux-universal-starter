@@ -57,7 +57,6 @@ module.exports = {
       'babel-runtime/helpers/typeof',
 
       // </babel-runtime>
-
       'multireducer',
       'react',
       'react-dom',
@@ -71,7 +70,7 @@ module.exports = {
       'redux-form',
       'serialize-javascript',
       'superagent',
-      'warning',
+      'warning'
     ]
   },
 
