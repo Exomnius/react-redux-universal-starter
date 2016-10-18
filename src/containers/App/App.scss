@@ -1,5 +1,11 @@
-.app {
-  .randomClass {
+@import 'bourbon';
+@import 'neat';
 
+.app {
+  .container {
+    padding: rem(20);
+
+    @include span-columns(8);
+    @include shift(2);
   }
 }

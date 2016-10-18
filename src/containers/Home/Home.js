@@ -14,13 +14,11 @@ export default class Home extends Component {
             <h1>{config.app.title}</h1>
 
             <h2>{config.app.description}</h2>
-          </div>
-        </div>
 
-        <div className="container">
-          <p>
-            This is a started for a Universal React Redux project!
-          </p>
+            <p>
+              This is a starter for a Universal React Redux project!
+            </p>
+          </div>
         </div>
       </div>
     );

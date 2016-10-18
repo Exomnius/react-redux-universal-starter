@@ -20,29 +20,35 @@ html {
 
 }
 
+body {
+  font-family: $font-default;
+}
+
 //basic classes that we can extend throughout the components so we don't have to repeat this information
 
-.font-light {
-  font-family: $font-primary-light;
-  font-weight: normal;
+:global {
+  .font-light {
+    font-family: $font-primary-light;
+    font-weight: normal;
+  }
+
+  .font-regular {
+    font-family: $font-primary-regular;
+    font-weight: normal;
+  }
+
+  .font-semibold {
+    font-family: $font-primary-semibold;
+    font-weight: 600;
+  }
+
+  .font-bold {
+    font-family: $font-primary-bold;
+    font-weight: bold;
+  }
 }
 
-.font-regular {
-  font-family: $font-primary-regular;
-  font-weight: normal;
-}
-
-.font-semibold {
-  font-family: $font-primary-semibold;
-  font-weight: 600;
-}
-
-.font-bold {
-  font-family: $font-primary-bold;
-  font-weight: bold;
-}
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, h2, h3, h4, h5, h6 :global(.h1, .h2, .h3, .h4, .h5, .h6) {
   text-transform: uppercase;
   a {
     font-size: inherit;
@@ -56,7 +62,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   }
 }
 
-h1, .h1 {
+h1, :global(.h1) {
   @extend .font-semibold;
   font-size: rem(22);
   color:$color-abbey-gray;
@@ -65,30 +71,30 @@ h1, .h1 {
   }
 }
 
-h2, .h2 {
+h2, :global(.h2) {
   @extend .font-regular;
   font-size: rem(16);
   // font-weight: bold;
   color:$color-curious-blue;
 }
 
-h3, .h3 {
+h3, :global(.h3) {
   @extend .font-semibold;
   font-size: rem(18);
 }
 
-h4, .h4 {
+h4, :global(.h4) {
   @extend .font-semibold;
   font-size: rem(17);
 }
 
-h5, .h5 {
+h5, :global(.h5) {
   @extend .font-semibold;
   font-size: rem(17);
   text-transform: none;
 }
 
-h6, .h6 {
+h6, :global(.h6) {
   @extend .font-semibold;
   font-size: rem(16);
   text-transform: none;

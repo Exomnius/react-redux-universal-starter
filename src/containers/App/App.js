@@ -19,12 +19,12 @@ export default class App extends Component {
         <Helmet {...config.app.head} />
 
         <NavBar>
-          <a href=""><span className="h2">Test</span></a>
-          <a href=""><span className="h2">Test</span></a>
-          <a href=""><span className="h2">Test</span></a>
+          <a href=""><span className="h2">Home</span></a>
+          <a href=""><span className="h2">Info</span></a>
+          <a href=""><span className="h2">About</span></a>
         </NavBar>
 
-        <div className={styles.appContent}>
+        <div className={styles.container}>
           {this.props.children}
         </div>
       </div>
