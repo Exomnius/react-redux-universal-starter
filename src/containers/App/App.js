@@ -3,6 +3,9 @@ import Helmet from 'react-helmet';
 import config from 'config';
 import NavBar from 'components/NavBar/NavBar';
 
+// Global scss
+import 'theme/app.scss';
+
 export default class App extends Component {
   static propTypes = {
     children: PropTypes.object.isRequired
