@@ -4,7 +4,7 @@
 .nav-bar {
   width: 100%;
   height: rem(50);
-  background-color: #222;
+  background-color: #2D2D2D;
 }
 
 .logo {
@@ -28,4 +28,8 @@ li {
   float: left;
   list-style: none;
   padding: rem(5);
+}
+
+a {
+  color: #fff;
 }

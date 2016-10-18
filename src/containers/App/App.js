@@ -16,10 +16,9 @@ export default class App extends Component {
         <Helmet {...config.app.head} />
 
         <NavBar>
-          <a href="">test</a>
-          <a href="">test</a>
-          <a href="">test</a>
-          <a href="">test</a>
+          <a href=""><span className="h2">Test</span></a>
+          <a href=""><span className="h2">Test</span></a>
+          <a href=""><span className="h2">Test</span></a>
         </NavBar>
 
         <div className={styles.appContent}>

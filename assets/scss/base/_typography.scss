@@ -1,0 +1,107 @@
+// ==========================================================================
+// TYPOGRAPHY
+// ==========================================================================
+
+html {
+
+  font-size: $font-basesize-desktop;
+
+  @include media($media-desktop) {
+    font-size: $font-basesize-small-desktop;
+  }
+
+  @include media($media-tablet) {
+    font-size: $font-basesize-tablet;
+  }
+
+  @include media($media-mobile) {
+    font-size: $font-basesize-mobile;
+  }
+
+}
+
+//basic classes that we can extend throughout the components so we don't have to repeat this information
+
+.font-light {
+  font-family: $font-primary-light;
+  font-weight: normal;
+}
+
+.font-regular {
+  font-family: $font-primary-regular;
+  font-weight: normal;
+}
+
+.font-semibold {
+  font-family: $font-primary-semibold;
+  font-weight: 600;
+}
+
+.font-bold {
+  font-family: $font-primary-bold;
+  font-weight: bold;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  text-transform: uppercase;
+  a {
+    font-size: inherit;
+    color: inherit;
+    text-decoration: inherit;
+  }
+  span {
+    font: inherit;
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+h1, .h1 {
+  @extend .font-semibold;
+  font-size: rem(22);
+  color:$color-abbey-gray;
+  .center-col &, .mini-col & {
+    margin: rem(50) 0 rem(20);
+  }
+}
+
+h2, .h2 {
+  @extend .font-regular;
+  font-size: rem(16);
+  // font-weight: bold;
+  color:$color-curious-blue;
+}
+
+h3, .h3 {
+  @extend .font-semibold;
+  font-size: rem(18);
+}
+
+h4, .h4 {
+  @extend .font-semibold;
+  font-size: rem(17);
+}
+
+h5, .h5 {
+  @extend .font-semibold;
+  font-size: rem(17);
+  text-transform: none;
+}
+
+h6, .h6 {
+  @extend .font-semibold;
+  font-size: rem(16);
+  text-transform: none;
+}
+
+p, ul, ol, li, pre {
+  font-size: rem(14);
+}
+
+b, strong {
+  @extend .font-semibold;
+}
+
+i, em {
+  font-style: italic;
+}

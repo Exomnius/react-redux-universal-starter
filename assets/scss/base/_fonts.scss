@@ -1,0 +1,18 @@
+// ==========================================================================
+// CUSTOM FONT DECLARATIONS
+// ==========================================================================
+
+// Custom @font-face fonts
+//***************************************
+
+@each $custom-font in $custom-fonts {
+
+  @font-face {
+    font-family:"#{$custom-font}";
+    src: url("./../../../assets/fonts/#{$custom-font}.eot");
+    src: url("./../../../assets/fonts/#{$custom-font}.eot?#iefix") format('embedded-opentype'),
+    url("./../../../assets/fonts/#{$custom-font}.woff") format('woff'),
+    url("./../../../assets/fonts/#{$custom-font}.ttf")  format('truetype'),
+    url("./../../../assets/fonts/#{$custom-font}.svg##{$custom-font}") format('svg');
+  }
+}
