@@ -5,32 +5,33 @@
   width: 100%;
   height: rem(50);
   background-color: #2D2D2D;
-}
 
-.logo {
-  float: left;
-  height: rem(40);
-  margin: rem(5);
-}
+  ul {
+    display: inline-block;
+    margin: 0;
+  }
 
-.links {
-  @include span-columns(10);
-}
+  li {
+    line-height: rem(40);
+    display: inline-block;
+    float: left;
+    list-style: none;
+    padding: rem(5) rem(10);
+  }
 
-ul {
-  display: inline-block;
-  margin: 0;
-}
+  a {
+    color: #fff !important;
+    text-decoration: none;
+  }
 
-li {
-  line-height: rem(40);
-  display: inline-block;
-  float: left;
-  list-style: none;
-  padding: rem(5) rem(10);
-}
+  .logo {
+    float: left;
+    height: rem(40);
+    margin: rem(5);
+  }
 
-a > span {
-  color: #fff !important;
-  text-decoration: none;
+  .links {
+    @include span-columns(10);
+  }
+
 }

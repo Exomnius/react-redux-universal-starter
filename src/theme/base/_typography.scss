@@ -74,8 +74,6 @@ h1, :global(.h1) {
 h2, :global(.h2) {
   @extend .font-regular;
   font-size: rem(16);
-  // font-weight: bold;
-  color:$color-curious-blue;
 }
 
 h3, :global(.h3) {
