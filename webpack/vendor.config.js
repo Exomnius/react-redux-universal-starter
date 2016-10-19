@@ -57,11 +57,13 @@ module.exports = {
       'babel-runtime/helpers/typeof',
 
       // </babel-runtime>
+      'intl',
       'multireducer',
       'react',
       'react-dom',
       'react-helmet',
       'react-hot-loader',
+      'react-intl',
       'react-redux',
       'react-router',
       'react-router-redux',

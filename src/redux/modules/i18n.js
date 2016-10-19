@@ -2,7 +2,7 @@ import config from 'config';
 
 const CHANGE = 'redux-starter/i18n/CHANGE';
 
-export function change(locale) {
+export function changeLocale(locale) {
   return {
     type: CHANGE,
     locale

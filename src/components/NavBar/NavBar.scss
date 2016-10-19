@@ -31,7 +31,11 @@
   }
 
   .links {
-    @include span-columns(10);
+    @include span-columns(8);
+  }
+
+  .locales {
+    @include span-columns(2);
   }
 
 }

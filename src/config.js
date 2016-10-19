@@ -36,6 +36,6 @@ module.exports = Object.assign({
   },
   i18n: {
     defaultLocale: 'en',
-    locales: []
+    locales: ['en', 'nl']
   }
 }, environment);

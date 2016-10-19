@@ -1,0 +1,9 @@
+{
+  "home.header": "React Redux Universal Starter",
+  "home.description": "Dit is een starter project van een React Redux applicatie in een Universal (Isomorphic) omgeving",
+  "home.features": "Features",
+  "home.features.css_modules": "CSS Modules",
+  "home.features.i18n": "Internationalization (react-intl)",
+  "home.features.vendor_dll": "Vendor DLL's om het bouw proces the versnellen",
+  "home.features.ducks": "Ducks"
+}

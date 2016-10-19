@@ -14,12 +14,13 @@ import { AppContainer as HotEnabler } from 'react-hot-loader';
 import withScroll from 'scroll-behavior';
 import { addLocaleData } from 'react-intl';
 import en from 'react-intl/locale-data/en';
+import nl from 'react-intl/locale-data/nl';
 import getRoutes from './routes';
 
 /*
  * I18N
 */
-addLocaleData([...en]);
+addLocaleData([...en,...nl]);
 // All modern browsers, except `Safari`, have implemented
 // the `ECMAScript Internationalization API`.
 // For that we need to patch in on runtime.
