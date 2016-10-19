@@ -33,5 +33,9 @@ module.exports = Object.assign({
         { property: 'og:image:height', content: '200' }
       ]
     }
+  },
+  i18n: {
+    defaultLocale: 'en',
+    locales: []
   }
 }, environment);

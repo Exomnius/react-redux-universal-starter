@@ -1,5 +1,5 @@
 /**
- * THIS IS THE ENTRY POINT FOR THE CLIENT, JUST LIKE server.js IS THE ENTRY POINT FOR THE SERVER.
+ * THIS IS THE ENTRY POINT FOR THE CLIENT
  */
 import 'babel-polyfill';
 import React from 'react';
@@ -12,7 +12,22 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import { ReduxAsyncConnect } from 'redux-connect';
 import { AppContainer as HotEnabler } from 'react-hot-loader';
 import withScroll from 'scroll-behavior';
+import { addLocaleData } from 'react-intl';
+import en from 'react-intl/locale-data/en';
 import getRoutes from './routes';
+
+/*
+ * I18N
+*/
+addLocaleData([...en]);
+// All modern browsers, except `Safari`, have implemented
+// the `ECMAScript Internationalization API`.
+// For that we need to patch in on runtime.
+if (!global.Intl) {
+  require.ensure(['intl'], (require) => {
+    global.intl = require('intl').default;
+  }, 'IntlBundle');
+}
 
 const client = new ApiClient();
 const _browserHistory = withScroll(browserHistory);
