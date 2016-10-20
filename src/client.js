@@ -20,7 +20,7 @@ import getRoutes from './routes';
 /*
  * I18N
 */
-addLocaleData([...en,...nl]);
+addLocaleData([...en, ...nl]);
 // All modern browsers, except `Safari`, have implemented
 // the `ECMAScript Internationalization API`.
 // For that we need to patch in on runtime.
@@ -72,7 +72,7 @@ if (process.env.NODE_ENV !== 'production') {
 if (__DEVTOOLS__ && !window.devToolsExtension) {
   const devToolsDest = document.createElement('div');
   window.document.body.insertBefore(devToolsDest, null);
-  const DevTools = require('./containers/DevTools/DevTools');
+  const DevTools = require('./components/DevTools/DevTools');
   ReactDOM.render(
     <Provider store={store} key="provider">
       <DevTools />

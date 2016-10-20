@@ -1,11 +1,13 @@
 import React from 'react';
-import { IndexRoute, Route } from 'react-router';
+import { Route } from 'react-router';
 import {
   App,
-  NotFound,
+  NotFound
+} from 'core';
+import {
   Home,
   Links
-} from 'containers';
+} from 'modules';
 
 export default () => (
   <Route path="/" component={App}>

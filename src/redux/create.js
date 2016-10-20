@@ -9,7 +9,7 @@ export default function createStore(history, client, data, online = true, persis
   let finalCreateStore;
   if (__CLIENT__ && __DEVTOOLS__) {
     const { persistState } = require('redux-devtools');
-    const DevTools = require('../containers/DevTools/DevTools');
+    const DevTools = require('./../components/DevTools/DevTools');
     const enhancers = (!online ? [autoRehydrate({ log: true })] : []).concat([
       applyMiddleware(...middleware),
       window.devToolsExtension ? window.devToolsExtension() : DevTools.instrument(),
