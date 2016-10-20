@@ -6,7 +6,7 @@ import * as i18n from './i18n';
 class Module extends Component {
   static propTypes = {
     locale: PropTypes.string.isRequired,
-    children: PropTypes.array.isRequired
+    children: PropTypes.object.isRequired
   };
 
   render() {
