@@ -5,5 +5,7 @@
   "home.features.css_modules": "CSS Modules",
   "home.features.i18n": "Internationalization (react-intl)",
   "home.features.vendor_dll": "Vendor DLL's to speed up development build time",
-  "home.features.ducks": "Ducks"
+  "home.features.ducks": "Ducks",
+  "about.header": "About",
+  "about.description": "This project showcases the most used react plugins in a basic React Redux app."
 }

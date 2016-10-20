@@ -2,18 +2,17 @@ import React from 'react';
 import { IndexRoute, Route } from 'react-router';
 import {
   App,
+  NotFound,
   Home,
-  Links,
-  About,
-  NotFound
+  Links
 } from 'containers';
 
 export default () => (
   <Route path="/" component={App}>
-    <IndexRoute component={Home} />
 
-    <Route path="/links" component={Links} />
-    <Route path="/about" component={About} />
+    {/* Modules */}
+    {Home}
+    {Links}
 
     {/* Catch all route */}
     <Route path="*" component={NotFound} status={404} />

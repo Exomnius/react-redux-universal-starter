@@ -1,5 +1,5 @@
 export App from './App/App';
-export Home from './Home/Home';
-export Links from './Links/Links';
-export About from './About/About';
 export NotFound from './NotFound/NotFound';
+
+export Home from './Home/routes';
+export Links from './Links/routes';

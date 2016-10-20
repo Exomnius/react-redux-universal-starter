@@ -5,5 +5,7 @@
   "home.features.css_modules": "CSS Modules",
   "home.features.i18n": "Internationalization (react-intl)",
   "home.features.vendor_dll": "Vendor DLL's om het bouw proces the versnellen",
-  "home.features.ducks": "Ducks"
+  "home.features.ducks": "Ducks",
+  "about.header": "Over dit project",
+  "about.description": "Dit project bevat de meest gebruikte react plugins in een kleine starter applicatie."
 }
