@@ -1,4 +1,10 @@
 var webpack = require('webpack');
+var helpers = require('./webpack/helpers');
+
+// Bourbon and neat integration
+const bourbon = require('node-bourbon').includePaths;
+const neat = require('node-neat').includePaths;
+const sassPaths = `${helpers.joinPaths(bourbon)}&${helpers.joinPaths(neat)}`;
 
 module.exports = function(config) {
   config.set({
@@ -39,7 +45,7 @@ module.exports = function(config) {
           { test: /\.less$/, loader: 'style!css!less' },
           {
             test: /\.scss$/,
-            loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap'
+            loader: `style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap&${sassPaths}`
           }
         ]
       },

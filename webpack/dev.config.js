@@ -19,7 +19,6 @@ var babelrcObject = {};
 // Bourbon and neat integration
 const bourbon = require('node-bourbon').includePaths;
 const neat = require('node-neat').includePaths;
-
 const sassPaths = `${helpers.joinPaths(bourbon)}&${helpers.joinPaths(neat)}`;
 
 try {

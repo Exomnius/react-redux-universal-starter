@@ -10,7 +10,8 @@ export function changeLocale(locale) {
 }
 
 const initialState = {
-  locale: config.i18n.defaultLocale
+  locale: config.i18n.defaultLocale,
+  locales: config.i18n.locales
 };
 
 export default function reducer(state = initialState, action = {}) {

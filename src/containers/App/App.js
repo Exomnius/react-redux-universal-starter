@@ -19,7 +19,8 @@ class App extends Component {
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
     children: PropTypes.object.isRequired,
-    locale: PropTypes.string.isRequired
+    locale: PropTypes.string.isRequired,
+    locales: PropTypes.array.isRequired
   };
 
   constructor(props) {
@@ -34,14 +35,16 @@ class App extends Component {
 
   render() {
     const styles = require('./App.scss');
-    const { locale } = this.props;
+    const { locale, locales } = this.props;
+
+    const logo = require('./../../../static/logo.jpg');
 
     return (
       <IntlProvider key="intl" locale={locale} messages={i18n[locale]}>
         <div className={styles.app}>
           <Helmet {...config.app.head} />
 
-          <NavBar locale={locale} locales={config.i18n.locales} onLocaleClick={this.onLocaleClick}>
+          <NavBar locale={locale} locales={locales} onLocaleClick={this.onLocaleClick} logo={logo}>
             <Link to="/" className="h2"><FormattedMessage id="navigation.home"/></Link>
             <Link to="/links" className="h2"><FormattedMessage id="navigation.useful_links"/></Link>
             <Link to="/about" className="h2"><FormattedMessage id="navigation.about"/></Link>
@@ -58,7 +61,8 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    locale: state.i18n.locale
+    locale: state.i18n.locale,
+    locales: state.i18n.locales
   };
 }
 
