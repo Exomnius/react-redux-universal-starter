@@ -2,58 +2,14 @@
 // VARIABLES - all variables used throughout the scss files
 // ==========================================================================
 
-//COLORS
-$color-white: #FFF;
-$color-black: #000;
-
-$color-old-gold-yellow: #CB9933;
-$color-candlelight-yellow: #F8DC0E;
-$color-tango-orange: #f47421;
-$color-cardinal-red: #CB2026;
-$color-haze-green: #009367;
-$color-curious-blue: #338FCE;
-
-$color-regent-gray: #8899a6;
-$color-alto-gray: #d8d8d8;
-$color-alabaster-gray: #f8f8f8;
-$color-mercury-gray: #e2e2e2;
-$color-abbey-gray: #505152;
-$color-porcelain-gray: #ecf0f1;
-
 //CUSTOM FONTS
-$custom-fonts: montserrat-light, montserrat-regular, montserrat-semibold, montserrat-bold;
+//$custom-fonts: ;
 
-//FONT DECLARATIONS (should have a font- prefix)
-
-$font-default: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-$font-primary-light: "montserrat-light";
-$font-primary-regular: "montserrat-regular";
-$font-primary-bold: "montserrat-bold";
-$font-primary-semibold: "montserrat-semibold";
-
-$font-basesize-mobile: 12px;
-$font-basesize-tablet: 14px;
-$font-basesize-small-desktop: 15px;
-$font-basesize-desktop: 16px;
-
-//MEDIA QUERIES
-
-$media-mobile: max-width 767px;
-$media-tablet: min-width 768px max-width 1024px;
-$media-tablet-landscape-only: width 1024px;
-$media-desktop: min-width 1025px max-width 1440px;
-$media-min-480: max-width 479px;
-$media-min-1024: max-width 1024px;
-$media-min-1280: max-width 1279px;
-$media-min-1440: max-width 1439px;
-$media-min-1600: max-width 1599px;
-$media-landscape: orientation landscape;
-$media-portrait: orientation portrait;
-
+// ==========================================================================
+// BOOTSTRAP VARIABLES - all variables used in Bootstrap
+// ==========================================================================
 
 // ==========================================================================
 // EXTERNAL VARIABLES - all variables used in JS plugins
 // ==========================================================================
 
-// ...
