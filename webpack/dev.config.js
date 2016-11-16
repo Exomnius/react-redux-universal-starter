@@ -45,6 +45,7 @@ var webpackConfig = module.exports = {
     'main': [
       'webpack-hot-middleware/client?path=http://' + host + ':' + port + '/__webpack_hmr',
       'react-hot-loader/patch',
+      'bootstrap-loader',
       './src/client.js'
     ]
   },
@@ -86,6 +87,7 @@ var webpackConfig = module.exports = {
     ],
     extensions: ['', '.json', '.js', '.jsx']
   },
+  postcss: [],
   plugins: [
     // hot reload
     new webpack.HotModuleReplacementPlugin(),

@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
-import { Link } from 'react-router';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import { IntlProvider, FormattedMessage } from 'react-intl';
 import config from 'config';
-import NavBar from 'components/NavBar/NavBar';
+import { Header } from 'components';
+import { NavLink } from 'reactstrap';
 import { changeLocale } from 'redux/modules/i18n';
 
 import * as i18n from './i18n';
@@ -37,18 +38,15 @@ class App extends Component {
     const styles = require('./App.scss');
     const { locale, locales } = this.props;
 
-    const logo = require('./../../../static/logo.jpg');
-
     return (
       <IntlProvider key="intl" locale={locale} messages={i18n[locale]}>
         <div className={styles.app}>
           <Helmet {...config.app.head} />
 
-          <NavBar locale={locale} locales={locales} onLocaleClick={this.onLocaleClick} logo={logo}>
-            <Link to="/" className="h2"><FormattedMessage id="navigation.home"/></Link>
-            <Link to="/links" className="h2"><FormattedMessage id="navigation.useful_links"/></Link>
-            <Link to="/about" className="h2"><FormattedMessage id="navigation.about"/></Link>
-          </NavBar>
+          <Header locale={locale} locales={locales} onLocaleClick={this.onLocaleClick}>
+            <NavLink tag={Link} to="/info"><FormattedMessage id="navigation.info"/></NavLink>
+            <NavLink tag={Link} to="/about"><FormattedMessage id="navigation.about"/></NavLink>
+          </Header>
 
           <div className={styles.container}>
             {this.props.children}
